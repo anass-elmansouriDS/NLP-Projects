@@ -73,4 +73,6 @@ The idea is to fine tune a Sentence-Transformer LLM that analyses the caption, h
 
 **All-MiniLM-L6-V2-model** : Contains the files of the fine tuned LLM.
 
+**keyblend-recommender** : Contains the files for the api application.
+
 

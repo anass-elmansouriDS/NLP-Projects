@@ -1,0 +1,6 @@
+fastapi 
+uvicorn 
+sentence_transformers
+emoji 
+spacy
+numpy
