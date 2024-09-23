@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from keyblend import KeyBlender
-import pickle
 # Initialize the FastAPI app
 app = FastAPI()
 
