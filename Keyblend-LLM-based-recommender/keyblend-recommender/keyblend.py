@@ -11,9 +11,9 @@ class KeyBlender :
     """
     This is the class that allows for easy usage of the keyblender recommender.
     """
-    def __init__(self,model="/teamspace/studios/this_studio/kaggle/input/all-minilm-l6-v2-fine-tuned-model/kaggle/working/All-MiniLM-L6-V2-model") :
+    def __init__(self,model="/app/All-MiniLM-L6-V2-model") :
         self.model=SentenceTransformer(model)
-        with open("/teamspace/uploads/prod_names_updated.pkl", "rb") as f :
+        with open("/app/prod_names_updated.pkl", "rb") as f :
             self.products=pickle.load(f)
         #self.products=products
         self.product_embeddings=self.model.encode(list(self.products.keys()))
