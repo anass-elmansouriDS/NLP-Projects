@@ -62,10 +62,15 @@ The idea is to fine tune a Sentence-Transformer LLM that analyses the caption, h
 ## Files and folders' descriptions :  
 
 **Data_preparation.ipynb** : It's the notebook that contains the data creating and preprocessing process.
+
 **fine-tuning-the-llm-for-keyblend-recommender** : It's the notebook that contains the LLM fine tuning process.
+
 **keyblend.py** : It's the python file that contains the class implementation for the keyblend-recommender.
+
 **main.py** : It's the python file that contains the code for implementation of the API that allows for easy communication with the recommender.
+
 **Data** : Contains the data used for this project.
+
 **All-MiniLM-L6-V2-model** : Contains the files of the fine tuned LLM.
 
 
