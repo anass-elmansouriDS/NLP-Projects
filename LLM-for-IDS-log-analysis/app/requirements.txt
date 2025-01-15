@@ -1,0 +1,11 @@
+numpy
+shap
+huggingface_hub
+transformers
+torch
+langchain
+langchain_community
+unsloth
+streamlit
+joblib
+pandas
