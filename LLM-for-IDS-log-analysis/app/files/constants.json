@@ -1,0 +1,47 @@
+{
+    "Traffic_classifier_constants" : {
+        "src_addrs" : ["192.168.100.149","192.168.100.148","192.168.100.150","192.168.100.147","192.168.100.1" ,"192.168.100.3" ,"192.168.100.4" ,"192.168.100.7" ,"192.168.100.5"],
+        "flgs" : ["ESTABLISHED", "ESTABLISHED | SYN_SENT", "ESTABLISHED | SYN_RECEIVED", "ESTABLISHED | FIN_WAIT_1","ESTABLISHED | ACK","ESTABLISHED | URGENT","ESTABLISHED | PUSH","ESTABLISHED | FIN_WAIT_2","ESTABLISHED | RESET"],
+        "dest_addrs": ["192.168.100.149","192.168.100.150","192.168.100.147","192.168.100.6","192.168.100.3" ,"192.168.100.4" ,"192.168.100.7" ,"192.168.100.5"],
+        "proto" : ["TCP", "UDP", "ICMP", "IPV6-ICMP","ARP","RARP","IGMP"],
+        "states" : ["RESET","CONNECTED","NO_RESPONSE","ACCEPTED","MASQUERADE"],
+        "dst_types" : ["Private","External"],
+        "classes" : {"0":"Normal Traffic","1" : "DoS attack","2": "DDoS attack","3": "OS Fingerprint attack","4": "Service Scan attack","5" : "Keylogging attack","6" : "Data Exfiltration attack"},
+        "classifier_features" : ["flgs_e", "flgs_e s", "flgs_e dS", "flgs_e g", "flgs_e *", "flgs_eU",
+                            "flgs_e &", "flgs_e    F", "flgs_e r", "proto_tcp", "proto_udp",
+                            "proto_icmp", "proto_arp", "proto_ipv6-icmp", "proto_rarp",
+                            "proto_igmp", "saddr_192.168.100.149", "saddr_192.168.100.148",
+                            "saddr_192.168.100.150", "saddr_192.168.100.147", "saddr_192.168.100.3",
+                            "saddr_192.168.100.7", "saddr_192.168.100.5", "saddr_192.168.100.4",
+                            "saddr_192.168.100.1", "daddr_192.168.100.149", "daddr_192.168.100.150",
+                            "daddr_192.168.100.147", "daddr_192.168.100.3", "daddr_192.168.100.7",
+                            "daddr_192.168.100.6", "daddr_192.168.100.5", "daddr_192.168.100.4",
+                            "daddr_private", "daddr_external", "pkts", "bytes", "state_RST",
+                            "state_CON", "state_NRS", "state_ACC", "state_MAS", "dur", "mean",
+                            "min", "dpkts", "dbytes", "tnp_per_dport", "ar_p_proto_p_dstip",
+                            "ar_p_proto_p_sport", "pkts_p_state_p_protocol_p_destip"],
+        "abbv" : {"flgs" : {"ESTABLISHED" : "e","ESTABLISHED | SYN" : "e s","ESTABLISHED | SYN_RECEIVED" : "e dS","ESTABLISHED | FIN_WAIT_2" : "e    F","ESTABLISHED | FIN_WAIT_1" : "e g","ESTABLISHED | ACK" : "e *","ESTABLISHED | URGENT" :"eU","ESTABLISHED | PUSH" :"e &","ESTABLISHED | RESET" :"e r"},
+                            "state" : {"RESET" : "RST","CONNECTED":"CON","NO_RESPONSE":"NRS","ACCEPTED":"ACC","MASQUERADE":"MAS"}
+                 }
+    },
+
+    "Prompt_constants" : {
+        "flags_state" : ["flgs_e", "flgs_e s", "flgs_e dS", "flgs_e g", "flgs_e *", "flgs_eU",
+                         "flgs_e &", "flgs_e    F", "flgs_e r"],
+        "protos" : ["proto_tcp", "proto_udp",
+                    "proto_icmp", "proto_arp", "proto_ipv6-icmp", "proto_rarp",
+                    "proto_igmp"],
+        "s_addr" : ["saddr_192.168.100.149", "saddr_192.168.100.148",
+                    "saddr_192.168.100.150", "saddr_192.168.100.147", "saddr_192.168.100.3",
+                    "saddr_192.168.100.7", "saddr_192.168.100.5", "saddr_192.168.100.4",
+                    "saddr_192.168.100.1"],
+        "d_addr" : ["daddr_192.168.100.149", "daddr_192.168.100.150",
+                    "daddr_192.168.100.147", "daddr_192.168.100.3", "daddr_192.168.100.7",
+                    "daddr_192.168.100.6", "daddr_192.168.100.5", "daddr_192.168.100.4"],
+        "d_type" : ["daddr_private","daddr_external"],
+        "states" : ["state_RST","state_CON", "state_NRS", "state_ACC", "state_MAS"],
+        "transaction_info" : ["pkts", "bytes","dur", "mean",
+                              "min", "dpkts", "dbytes", "tnp_per_dport", "ar_p_proto_p_dstip",
+                              "ar_p_proto_p_sport", "pkts_p_state_p_protocol_p_destip"]
+    }
+}
