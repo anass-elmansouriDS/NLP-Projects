@@ -74,7 +74,7 @@ Check "requirements.txt" for the required packages.
 ### Installation
 1. Clone the repository:  
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/anass-elmansouriDS/NLP-Projects/tree/214bcbb39eda98fcd142881f87d7e9eec55aef76/LLM-for-IDS-log-analysis
    ```
 2. Build and run the Docker container:  
    ```bash
